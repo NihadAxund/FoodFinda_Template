@@ -1,0 +1,195 @@
+:root {
+
+    /* header */
+
+    --green: #8eb50b;
+    --white: #ffffff;
+    --ImgHead: 80px;
+    --Fontsize: 18px;
+    --head-1_height: 70px;
+    --black-Head_width: 18%;
+    --Logo_Width: 30%;
+
+
+    --black-head-icon-fontsize :0.9em;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(images/eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash.png);
+    background-size: cover;
+
+
+}
+
+.background_Color{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.111),rgba(0, 0, 0, 0.073), rgba(0, 0, 0, 0.927),rgba(0, 0, 0, 0.933), rgba(0, 0, 0, 0.933));
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.Head-1 {
+    z-index: 2;
+    background-color: var(--green);
+    width: 100%;
+    height: var(--head-1_height);
+    display: flex;
+    justify-content: center;
+}
+
+.Head-1>.Black_Head {
+    background-color: rgb(37, 37, 37);
+    width: var(--black-Head_width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.Black_Head a {
+    transition-property: background-color,color;
+    transition-duration: 1s;
+    text-decoration: none;
+    display: inline-block;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 8px;
+    font-size: var(--black-head-icon-fontsize);
+    color: var(--white);
+}
+
+.Black_Head i{
+    margin-right: 1vi;
+}
+
+.Head-1>:nth-child(2) {
+    height: 100%;
+    width: var(--Logo_Width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Head-1>:nth-child(2)>img {
+    width: var(--ImgHead);
+}
+
+.Head-1>:nth-child(2)>p {
+    margin-left: -5px;
+    text-transform: uppercase;
+    font-size: var(--Fontsize);
+    color: var(--white);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* main */
+
+main{
+   
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size:cover;
+    position: relative;
+    height: 50vi;
+}
+
+main>.Black_Opacity{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.775), rgba(0, 0, 0, 0.275));
+    height: 100%;
+    position: absolute;
+}
+
+/* responsiv */
+
+@media only screen and (max-width:1210px) {
+    :root {
+
+        /* header */
+
+        --ImgHead: 55px;
+        --Fontsize: 15px;
+        --head-1_height: 70px;
+        --black-Head_width: 30%;
+        --Logo_Width: 30%;
+        --black-head-icon-fontsize :0.8em;
+    }
+
+}
+
+
+
+@media only screen and (max-width:660px) {
+
+    :root {
+
+        /* header */
+
+        --green: #8eb50b;
+        --white: #ffffff;
+        --ImgHead: 55px;
+        --Fontsize: 15px;
+        --head-1_height: 60px;
+        --black-Head_width: 30%;
+        --Logo_Width: 40%;
+        --black-head-icon-fontsize :0.6em;
+    }
+
+}
+
+@media only screen and (max-width:510px) {
+    :root {
+
+        /* header */
+        --white: #ffffff;
+        --ImgHead: 35px;
+        --Fontsize: 10px;
+        --head-1_height: 50px;
+        --black-Head_width: 35%;
+        --Logo_Width: 35%;
+        --black-head-icon-fontsize :0.5em;
+    }
+}
+
+@media only screen and (max-width:385px) {
+    :root {
+
+        /* header */
+        --green: #ff6200;
+        --white: #ffffff;
+        --ImgHead: 35px;
+        --Fontsize: 10px;
+        --head-1_height: 50px;
+        --black-Head_width: 35%;
+        --Logo_Width: 35%;
+        --black-head-icon-fontsize :2vi;
+    }
+}
+
+
+@media only screen and (max-width:280px) {
+    :root {
+
+        /* header */
+        --green: #ff6200;
+        --white: #ffffff;
+        --ImgHead: 35px;
+        --Fontsize: 10px;
+        --head-1_height: 50px;
+        --black-Head_width: 35%;
+        --Logo_Width: 35%;
+        --black-head-icon-fontsize :1.9vi;
+    }
+
+}
