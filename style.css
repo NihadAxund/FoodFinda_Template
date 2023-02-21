@@ -3,15 +3,22 @@
     /* header */
 
     --green: #8eb50b;
+    --green2: #8db50b70;
     --white: #ffffff;
+    --yellow:#f9b116;
     --ImgHead: 80px;
     --Fontsize: 18px;
     --head-1_height: 70px;
     --black-Head_width: 18%;
     --Logo_Width: 30%;
-
-
-    --black-head-icon-fontsize :0.9em;
+    --black-head-icon-fontsize: 0.9em;
+    /* menu */
+    --Menu_Width: 30%;
+    --Menu_Height: 45px;
+    --Menu_Ol_Withd:20%;
+    --Menu_Ol_li_P_fontsize:1.15em;
+    /* menu bar */
+    --Item2_p1:2.5vi;
 }
 
 
@@ -20,18 +27,22 @@
     margin: 0;
 }
 
-body{
+body {
     background-image: url(images/eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash.png);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* background-position:bottom; */
 
 
 }
 
-.background_Color{
-    background-image: linear-gradient(rgba(255, 255, 255, 0.111),rgba(0, 0, 0, 0.073), rgba(0, 0, 0, 0.927),rgba(0, 0, 0, 0.933), rgba(0, 0, 0, 0.933));
+.background_Color {
+    background-image: linear-gradient(rgba(15, 15, 15, 0.577),rgba(0, 0, 0, 0.768),  rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.652), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.811), rgba(0, 0, 0, 0.915));
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     position: absolute;
+    background-attachment: fixed;
     z-index: 1;
     margin: 0;
     padding: 0;
@@ -57,17 +68,17 @@ body{
 
 
 .Black_Head a {
-    transition-property: background-color,color;
+    transition-property: background-color, color;
     transition-duration: 1s;
     text-decoration: none;
     display: inline-block;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 8px;
     font-size: var(--black-head-icon-fontsize);
     color: var(--white);
 }
 
-.Black_Head i{
+.Black_Head i {
     margin-right: 1vi;
 }
 
@@ -94,24 +105,188 @@ body{
 
 /* main */
 
-main{
-   
+main {
+
     width: 100%;
-    background-repeat: no-repeat;
-    background-position:top;
-    background-size:cover;
+
     position: relative;
+
+}
+
+.menu_Background {
+    width: 100%;
+    height: var(--Menu_Height);
+    display: flex;
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+
+.menu_Background>.menu {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.menu_Background ol {
+    width: var(--Menu_Ol_Withd);
+    height: 100%;
+    color: white;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    justify-items: start;
+    align-items: center;
+}
+
+.menu_Background ol>li {
+    margin: 1vi;
+    cursor: pointer;
+}
+
+.menu_Background ol>li>p{
+    font-size:var(--Menu_Ol_li_P_fontsize);
+}
+.menu_Background ol>li:hover{
+    color: aqua;
+}
+.menu ul {
+    width: var(--Menu_Width);
+    height: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.menu li {
+    color: #ffffff;
+    cursor: pointer;
+    margin: 1vi;
+    text-transform: uppercase;
+
+}
+
+
+.menu li:hover{
+    color: var(--green);
+}
+
+.bar {
+    display: none;
+    color: white;
+    
+    font-size: 20px;
+}
+
+/* menu bar */
+
+.Menu_Bar{
+    width: 100%;
     height: 50vi;
 }
-
-main>.Black_Opacity{
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.775), rgba(0, 0, 0, 0.275));
-    height: 100%;
-    position: absolute;
+.Menu_Bar{
+    display: flex;
 }
 
+.Menu_Bar > .item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width:4%;
+}
+
+.Menu_Bar > .item1>section{
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    font-size: 2.5vi;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2vi;
+    font-weight: bold;
+    height: 8%;
+}
+
+.Menu_Bar > .item1>section:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+.Menu_Bar > .item2{
+    grid-area: item2;
+    height: 100%;
+    margin-left: 2%;
+    color: white;
+    margin-right: 2%;
+    width: 88%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.item2 > .p1{
+    margin-top: 2.5vi;
+    height: auto;
+    width: 60%;
+    letter-spacing: 0.25vi;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: var(--Item2_p1);
+    font-weight: bold;
+    text-align: center;
+}
+.item2 > .p2{
+    background-color: var(--white);
+    margin-top: 0.3vi;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: var(--green);
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    text-transform:uppercase;
+    font-size:  var(--Item2_p1);
+    font-weight: bold;
+
+}
+
+
+
+
 /* responsiv */
+
+@media only screen and (max-width:1310px) {
+    :root {
+
+        /* header */
+
+        --ImgHead: 55px;
+        --Fontsize: 15px;
+        --head-1_height: 70px;
+        --black-Head_width: 30%;
+        --Logo_Width: 30%;
+        --black-head-icon-fontsize: 0.8em;
+        --Menu_Width: 65%;
+
+    }
+
+
+}
+
+
 
 @media only screen and (max-width:1210px) {
     :root {
@@ -123,27 +298,88 @@ main>.Black_Opacity{
         --head-1_height: 70px;
         --black-Head_width: 30%;
         --Logo_Width: 30%;
-        --black-head-icon-fontsize :0.8em;
+        --black-head-icon-fontsize: 0.8em;
+        --Menu_Width: 65%;
     }
-
+    
 }
 
-
-
-@media only screen and (max-width:660px) {
-
+@media only screen and (max-width:670px) {
+    
     :root {
-
+        
         /* header */
-
-        --green: #8eb50b;
         --white: #ffffff;
         --ImgHead: 55px;
         --Fontsize: 15px;
         --head-1_height: 60px;
         --black-Head_width: 30%;
         --Logo_Width: 40%;
-        --black-head-icon-fontsize :0.6em;
+        --black-head-icon-fontsize: 1.82vi;
+        /* menu */
+        --Menu_Width: 100%;
+        --Menu_Height: 40px;
+        /* menu bar */
+        --Item2_p1:3vi;
+    }
+
+    .bar {
+        margin: 10px;
+        display: inline;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+
+    .menu_Background {
+        height: 10vi;
+    }
+
+
+    .menu_Background>.menu:hover .bar{
+        display: none;
+    }
+
+    .menu_Background>.menu:hover ul{
+        
+        margin: auto;
+
+        display: flex;
+        align-items:start;
+        flex-direction: column;
+   
+     
+        overflow: hidden;
+        width: 50vi;
+        background-color: var(--green2);
+        height: auto;
+    }
+    .menu_Background > .menu >ul>li{
+        margin: 0;
+        width: 80%;
+        padding: 2.5vi;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: rgb(0, 0, 0);
+        transition: all;
+        transition-duration: 2s;
+    }
+
+    .menu_Background > .menu >ul>li:hover{
+        transition:all;
+        transition-duration: 1s;
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+    .menu_Background>.menu {
+        display: flex;
+        position: relative;
+        justify-content: start;
+        align-items: center;
+        width: auto;
     }
 
 }
@@ -158,22 +394,46 @@ main>.Black_Opacity{
         --head-1_height: 50px;
         --black-Head_width: 35%;
         --Logo_Width: 35%;
-        --black-head-icon-fontsize :0.5em;
+        --black-head-icon-fontsize: 0.5em;
+        /* menu */
+        --Menu_Width: 65%;
+        --Menu_Height: 35px;
+        --Menu_Ol_li_P_fontsize:3.5vi;
     }
+
+    .menu ul {
+        display: none;
+    }
+
+    .bar {
+        display: inline;
+    }
+
 }
 
 @media only screen and (max-width:385px) {
     :root {
 
         /* header */
-        --green: #ff6200;
         --white: #ffffff;
         --ImgHead: 35px;
         --Fontsize: 10px;
         --head-1_height: 50px;
         --black-Head_width: 35%;
         --Logo_Width: 35%;
-        --black-head-icon-fontsize :2vi;
+        --black-head-icon-fontsize: 2vi;
+        /* menu */
+        --Menu_Width: 65%;
+        --Menu_Height: 35px;
+        --Menu_Ol_li_P_fontsize:3vi;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .bar {
+        display: inline;
     }
 }
 
@@ -182,14 +442,16 @@ main>.Black_Opacity{
     :root {
 
         /* header */
-        --green: #ff6200;
-        --white: #ffffff;
         --ImgHead: 35px;
         --Fontsize: 10px;
         --head-1_height: 50px;
         --black-Head_width: 35%;
         --Logo_Width: 35%;
-        --black-head-icon-fontsize :1.9vi;
+        --black-head-icon-fontsize: 1.9vi;
+        /* menu */
+        --Menu_Width: 65%;
+        --Menu_Height: 35px;
+        --Menu_Ol_Withd:20%;
+        --Menu_Ol_li_P_fontsize:2vi;
     }
-
 }
