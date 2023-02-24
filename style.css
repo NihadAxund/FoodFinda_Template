@@ -66,6 +66,7 @@
     --Message_Background_Best_Section_p1-Padding: 30px;
     --Message_Background_Best_Section_p1-Letter_Spacing: 1px;
 
+    --footer_p-font-size:1em;
 }
 
 
@@ -851,11 +852,10 @@ footer{
     align-items: center;
 }
 
-footer>h1{
-    background-color: #080808;
+footer>p{
     text-align: center;
     color: white;
-    font-size: 1em;
+    font-size: var(--footer_p-font-size);
 }
 
 
@@ -1133,7 +1133,8 @@ footer>h1{
 
         --Message_Background_Best_Section_p1-Padding: 10px;
 
-
+        /* Footer */
+        --footer_p-font-size:0.9em;
     }
 
     .menu ul {
@@ -1168,11 +1169,9 @@ footer>h1{
         /* Rectangle Message */
         --Message_Background_P_Send-FontsizeEqual: 23px;
         --Message_Background_p-Fontsize: 1em;
-
-
-
-
-
+/* 
+        footer */
+        --footer_p-font-size:0.7em;
 
     }
 
@@ -1218,6 +1217,9 @@ footer>h1{
         --Admin_Rectangle: 1.7em;
         --Message_Background_p-Fontsize: 0.8em;
         --Message_Background_P_Send-FontsizeEqual: 15px;
+
+
+        --footer_p-font-size:0.6em;
 
     }
 }
