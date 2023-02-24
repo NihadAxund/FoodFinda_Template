@@ -1,24 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@0;1&family=Roboto:wght@500&family=Unbounded&display=swap');
+
 :root {
 
     /* header */
 
     --green: #8eb50b;
-    --green2: #8db50b70;
+    --green2: #8db50bcc;
     --white: #ffffff;
-    --yellow:#f9b116;
+    --yellow: #f9b116;
     --ImgHead: 80px;
     --Fontsize: 18px;
     --head-1_height: 70px;
     --black-Head_width: 18%;
     --Logo_Width: 30%;
     --black-head-icon-fontsize: 0.9em;
+    --Base_Font_Family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* menu */
     --Menu_Width: 30%;
     --Menu_Height: 45px;
-    --Menu_Ol_Withd:20%;
-    --Menu_Ol_li_P_fontsize:1.15em;
+    --Menu_Ol_Withd: 20%;
+    --Menu_Ol_li_P_fontsize: 1.15em;
     /* menu bar */
-    --Item2_p1:2.5vi;
+    --Item2_p1: 2.5vi;
+    --Item1_Section_Fontsize: 2.5vi;
+    --Search_Location_Search_p-Fontsize: 1.3vi;
+    --Search_Location_Location_p-Fontsize: 1.4vi;
+    --Menu_Bar_item2_Search_Location_Height: 2em;
+    --item2_p2: 1vh;
+    --item2_p3_fontsize: 2v;
+    --item2_p1-width: 60%;
+    --location_with: 25%;
+
+    /* Quick Searches */
+    --Quick_Section_p-FontSize: 2.1em;
+    --Quick_Section_List_Quick_Height: 35%;
+    --List_Quick_List_Item-Height: 16em;
+    --List_Quick_List_Item-Withd: 10em;
+
+    --Txt_Box_Width: 50%;
+    --Txt_Box_p3-fontSize: 0.9em;
+    --Txt_Box_p3-MarginTop: 1vi;
+    --Txt_Box_p3-Width: 15%;
+    --Txt_Box_p3-Padding: 10px;
+
+    --Collection_list_Litem_Image_Box_height: 150px;
+    --Collection_txt_Width: 90%;
+
+    --Image_Box_img-Width: 20%;
+    --Image_Box_img-Height: 100%;
+
+    /* Play Store */
+    --Txt_Play_Padding_Top_Bottom: 25px;
+    --Txt_Play_Font_size: 2.5em;
+    --Txt_Play_Child5_margin-top: 2.5vh;
+    /* Admin Section */
+    --Admin_Rectangle: 3em;
+
+    /* Rectangle Message */
+    --Arrow_Rectangle_i-Fontsize: 4vi;
+    --Message_Background_p-Fontsize: 2em;
+    --Message_Background_P_Send-FontSize: 0.8em;
+    --Message_Background_P_Send-FontsizeEqual:45px;
+
+    --Message_Background_Best_Section_p1-FontSize:2em;
+    --Message_Background_Best_Section_p1-Padding:30px;
+    --Message_Background_Best_Section_p1-Letter_Spacing:1px;
+
 }
 
 
@@ -30,19 +77,19 @@
 body {
     background-image: url(images/eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash.png);
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    position: relative;
     /* background-position:bottom; */
 
 
 }
 
 .background_Color {
-    background-image: linear-gradient(rgba(15, 15, 15, 0.577),rgba(0, 0, 0, 0.768),  rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.652), rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.811), rgba(0, 0, 0, 0.915));
+    background-image: linear-gradient(rgb(15, 15, 15), rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.221), rgba(0, 0, 0, 0.263), rgba(0, 0, 0, 0.704), rgba(0, 0, 0, 0.811), rgba(0, 0, 0, 0.915));
     width: 100%;
-    height: 110vh;
-    position: absolute;
+    height: auto;
     background-attachment: fixed;
+    position: absolute;
+
     z-index: 1;
     margin: 0;
     padding: 0;
@@ -72,7 +119,7 @@ body {
     transition-duration: 1s;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--Base_Font_Family);
     padding: 8px;
     font-size: var(--black-head-icon-fontsize);
     color: var(--white);
@@ -149,12 +196,14 @@ main {
     cursor: pointer;
 }
 
-.menu_Background ol>li>p{
-    font-size:var(--Menu_Ol_li_P_fontsize);
+.menu_Background ol>li>p {
+    font-size: var(--Menu_Ol_li_P_fontsize);
 }
-.menu_Background ol>li:hover{
+
+.menu_Background ol>li:hover {
     color: aqua;
 }
+
 .menu ul {
     width: var(--Menu_Width);
     height: 100%;
@@ -175,56 +224,56 @@ main {
 }
 
 
-.menu li:hover{
+.menu li:hover {
     color: var(--green);
 }
 
 .bar {
     display: none;
     color: white;
-    
+
     font-size: 20px;
 }
 
 /* menu bar */
 
-.Menu_Bar{
+.Menu_Bar {
     width: 100%;
-    height: 50vi;
+    height: auto;
 }
-.Menu_Bar{
+
+.Menu_Bar {
     display: flex;
 }
 
-.Menu_Bar > .item1{
+.Menu_Bar>.item1 {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 100%;
-    width:4%;
+    width: 4%;
 }
 
-.Menu_Bar > .item1>section{
+.Menu_Bar>.item1>section {
+    margin-top: 10vi;
     background-color: rgb(255, 255, 255);
+
     color: black;
     font-weight: bold;
-    font-size: 2.5vi;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    font-size: 2vi;
+    font-size: var(--Item1_Section_Fontsize);
     font-weight: bold;
-    height: 8%;
+    height: 12%;
 }
 
-.Menu_Bar > .item1>section:hover{
+.Menu_Bar>.item1>section:hover {
     background-color: var(--yellow);
     color: var(--white);
 }
 
-.Menu_Bar > .item2{
-    grid-area: item2;
+.Menu_Bar>.item2 {
     height: 100%;
     margin-left: 2%;
     color: white;
@@ -238,33 +287,537 @@ main {
 
 }
 
-.item2 > .p1{
+/* Search Location */
+
+.Menu_Bar>.item2>.Search_Location {
+    height: var(--Menu_Bar_item2_Search_Location_Height);
+    width: 90%;
+    margin-top: 5vi;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.Search_Location>.Search {
+    height: 100%;
+    width: 60%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-left: 1.5vi;
+    background-color: var(--white);
+    font-family: var(--Base_Font_Family);
+}
+
+.Search_Location>.Search>p {
+    margin-left: 10px;
+    font-size: var(--Search_Location_Search_p-Fontsize);
+
+}
+
+.Search_Location>.Location {
+    height: 100%;
+    width: var(--location_with);
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.Search_Location>.Location>p {
+    color: black;
+    font-weight: bold;
+    font-family: var(--Base_Font_Family);
+    font-size: var(--Search_Location_Location_p-Fontsize);
+}
+
+
+
+.item2>.p1 {
     margin-top: 2.5vi;
     height: auto;
-    width: 60%;
+    width: var(--item2_p1-width);
     letter-spacing: 0.25vi;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: var(--Item2_p1);
     font-weight: bold;
     text-align: center;
 }
-.item2 > .p2{
+
+.item2>.p2 {
     background-color: var(--white);
-    margin-top: 0.3vi;
-    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin-top: var(--item2_p2);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     color: var(--green);
     padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-radius: 5px;
-    text-transform:uppercase;
-    font-size:  var(--Item2_p1);
+    text-transform: uppercase;
+    font-size: var(--Item2_p1);
     font-weight: bold;
 
 }
 
+.item2>.p3 {
+    background-color: var(--green);
+    border-radius: 4px;
+    margin-top: 2vi;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: var(--item2_p3_fontsize);
+    font-family: var(--Base_Font_Family);
+}
+
+/* Quick_Section */
+
+.Quick_Section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.Quick_Section>p {
+    margin-top: 4vh;
+    color: var(--white);
+    font-size: var(--Quick_Section_p-FontSize);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+
+}
+
+.Quick_Section>.List_Quick {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+}
+
+.List_Quick>.List_Item {
+
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    height: var(--List_Quick_List_Item-Height);
+    width: var(--List_Quick_List_Item-Withd);
+}
+
+.List_Quick>.List_Item>.Item_Image {
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.781);
+    padding: 0.5px;
+    width: 95%;
+    display: flex;
+    height: 60%;
+}
+
+.List_Item>.p1 {
+    color: var(--white);
+    letter-spacing: 0.2vi;
+    margin-top: 0.2vi;
+    font-family: var(--Base_Font_Family);
+}
+
+.List_Item>.Item_Image>img {
+    width: 55%;
+    height: 65%;
+    margin: auto;
+}
+
+.List_Item>.Btn_Sec {
+    background-color: var(--green);
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1vi;
+    text-transform: uppercase;
+    color: var(--white);
+    font-family: var(--Base_Font_Family);
+    display: flex;
+    justify-content: center;
+    letter-spacing: 0.2vi;
+    font-size: 1.5vh;
+    align-items: center;
+    height: 20%;
+}
+
+.Btn_Sec:hover {
+    background-color: #f9b116;
+}
+
+.Collection_txt {
+    margin: auto;
+    background: rgb(142, 181, 11);
+    background-image: radial-gradient(circle, rgba(142, 181, 11, 1) 0%, rgba(0, 0, 0, 0.267) 100%);
+    font-size: var(--Quick_Section_p-FontSize);
+    color: var(--white);
+    width: var(--Collection_txt_Width);
+
+    z-index: 1;
+    margin-top: 20px;
+    padding: 1vh;
+    border-radius: 8px;
+    background-image: grad;
+    transition: background;
+    transition-duration: 2s;
+}
 
 
+.Collection_txt:hover {
+    background: rgba(0, 0, 0, 0.263);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.267) 0%, rgba(142, 181, 11, 1) 100%);
+    transition: background;
+    transition-duration: 2s;
+}
+
+
+
+/* Collection_list */
+
+.Collection_list {
+    display: flex;
+    margin: auto;
+    margin-top: 3vh;
+    flex-flow: column;
+    overflow: hidden;
+
+    width: 90%;
+    height: auto;
+}
+
+.Litem {
+
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.Collection_list>.Litem>.Image_Box {
+    width: 100%;
+    height: var(--Collection_list_Litem_Image_Box_height);
+    display: flex;
+    
+    justify-content: center;
+}
+
+
+
+.Image_Box>img {
+    width: var(--Image_Box_img-Width);
+    height: var(--Image_Box_img-Height);
+}
+
+
+
+.Txt_Box {
+    margin-left: 2vh;
+    color: var(--white);
+    display: flex;
+    flex-flow: column;
+    width: var(--Txt_Box_Width);
+    height: 100%;
+}
+
+.Txt_Box>.p1 {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0.5vi;
+}
+
+.Txt_Box>.p2 {
+    letter-spacing: 0.5px;
+}
+
+.Txt_Box>.p3 {
+    background-color: var(--green);
+    margin-top: var(--Txt_Box_p3-MarginTop);
+    width: var(--Txt_Box_p3-Width);
+    font-size: var(--Txt_Box_p3-fontSize);
+    text-transform: uppercase;
+    padding: var(--Txt_Box_p3-Padding);
+    text-align: center;
+}
+
+
+/* Play Store */
+
+.Rectangle_Play {
+    background-color: rgb(142, 181, 11);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10vh;
+    height: auto;
+}
+
+.Rectangle_Play>.Group_P>.Phone {
+    margin: auto;
+    width: 230px;
+    height: 420px;
+    margin: 10px;
+
+    position: relative;
+}
+
+.Rectangle_Play>.Group_P>.Phone>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Rectangle_Play>.Group_P>.Txt_Play {
+    margin: 10px;
+    width: 50%;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    height: auto;
+}
+
+.Txt_Play>:nth-child(1) {
+    margin-top: 2vh;
+    font-size: 2.7em;
+}
+
+.Txt_Play>:nth-child(2) {
+    font-size: 2.7em;
+    color: var(--white);
+
+}
+
+.Txt_Play>:nth-child(3) {
+    margin-top: 2.5vh;
+    line-height: 15px;
+    font-size: 0.9em;
+    color: var(--white);
+}
+
+.Txt_Play>:nth-child(5) {
+    text-align: center;
+
+    margin-top: var(--Txt_Play_Child5_margin-top);
+    padding: 15px;
+    padding-bottom: var(--Txt_Play_Padding_Top_Bottom);
+    padding-top: var(--Txt_Play_Padding_Top_Bottom);
+    font-size: var(--Txt_Play_Font_size);
+    width: 90%;
+    background-color: var(--white);
+}
+
+.Txt_Play>:nth-child(5):hover {
+    background-color: rgb(0, 115, 255);
+    color: var(--white);
+}
+
+.Rectangle_Play>.Group_P {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Play_Apple {
+    margin-top: 2vi;
+    width: auto;
+    height: auto;
+}
+
+.Admin_Rectangle {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Admin_Rectangle>:nth-child(1) {
+    font-size: var(--Admin_Rectangle);
+    color: var(--white);
+}
+
+.Admin_Rectangle>.Admin_List {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.Admin_List>.Item {
+    margin: 10px;
+    height: 150px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.Admin_List>.Item>p {
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.Admin_List>.Item>.Rectangle_1 {
+    border: 2px solid rgb(246, 246, 246);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.Admin_List>.Item>.Rectangle_1>P {
+
+    width: 80%;
+    color: var(--white);
+    font-size: 0.92em;
+}
+
+/* Arrow Rectangel */
+.Arrow_Rectangle {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Arrow_Rectangle>i {
+    font-size: var(--Arrow_Rectangle_i-Fontsize);
+    margin: 10px;
+    border-radius: 7px;
+    padding: 10px;
+    background-color: #ffffff;
+
+}
+
+
+.Arrow_Rectangle>i:hover {
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* Message rectangle */
+.Send_Message {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 80%;
+
+    background-image: url(images/eiliv-sonas-aceron-ZuIDLSz3XLg-unsplash.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.Message_Background {
+
+    background-image: linear-gradient(95deg, #00000017 0%, #080808 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.Message_Background>p {
+    margin: 10px;
+    margin-bottom: 0;
+    margin-top: 2vh;
+    color: white;
+    font-size: 2em;
+    font-family: var(--Base_Font_Family);
+    font-weight: bold;
+}
+
+.Message_Background>.Sec {
+    margin-top: 2.5vh;
+    width: 85%;
+    height: auto;
+    border: 2.5px solid var(--green);
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.Message_Background>.Sec>p {
+    margin: 4px;
+    margin-left: 15px;
+    color: #000000bf;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--Message_Background_p-Fontsize);
+}
+
+.Message_Background>.Sec_Message>p {
+    margin: 40px;
+    margin-left: 15px;
+}
+
+
+
+.Message_Background .P_Send {
+    font-size: var(--Message_Background_P_Send-FontSize);
+    margin-top: 3.2vh;
+    background-color: #8eb50b;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    padding-left: var(--Message_Background_P_Send-FontsizeEqual);
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding-right: var(--Message_Background_P_Send-FontsizeEqual);
+}
+
+.Message_Background .P_Send:hover {
+    background-color: var(--yellow);
+}
+
+.Message_Background>.Best_Section {
+    
+    margin-top: 8vh;
+    border-radius: 10px;
+    width: 85%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+.Message_Background>.Best_Section>p{
+    margin: 0;
+}
+
+
+
+.Message_Background>.Best_Section>.p1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: var(--Message_Background_Best_Section_p1-FontSize);
+    text-transform: uppercase;
+    padding: var(--Message_Background_Best_Section_p1-Padding);
+    text-align: center;
+}
+
+.Message_Background>.Best_Section>.P_Send{
+    text-align: center;
+    margin: 0;
+}
 
 /* responsiv */
 
@@ -280,10 +833,33 @@ main {
         --Logo_Width: 30%;
         --black-head-icon-fontsize: 0.8em;
         --Menu_Width: 65%;
+        --Menu_Bar_item2_Search_Location_Height: 2em;
+        /* Quick Searches */
+        --Quick_Section_p-FontSize: 1.85em;
 
+        --List_Quick_List_Item-Height: 8.5em;
+        --List_Quick_List_Item-Withd: 6.5em;
+
+        --Txt_Box_p3-fontSize: 0.9em;
+        --Txt_Box_p3-Width: 15%;
+        --Txt_Box_Width: 65%;
+
+        /* play store */
+        --Txt_Play_Padding_Top_Bottom: 20px;
+        --Txt_Play_Font_size: 2em;
+        /* Rectangle Mail */
+        --Message_Background_Best_Section_p1-FontSize:1.4em;
+        --Message_Background_P_Send-FontsizeEqual:35px;
+
+        --Message_Background_Best_Section_p1-Padding:25px;
+        --Message_Background_Best_Section_p1-Letter_Spacing:1px;
+        
     }
 
-
+    .Play_Apple {
+        text-align: center;
+    }
+    
 }
 
 
@@ -292,26 +868,43 @@ main {
     :root {
 
         /* header */
-
-        --ImgHead: 55px;
-        --Fontsize: 15px;
         --head-1_height: 70px;
+
         --black-Head_width: 30%;
         --Logo_Width: 30%;
         --black-head-icon-fontsize: 0.8em;
+        /* menu bar */
         --Menu_Width: 65%;
+        --location_with: 30%;
+        --Menu_Bar_item2_Search_Location_Height: 2em;
+        --Txt_Box_p3-fontSize: 0.8em;
+        --Txt_Box_p3-Width: 20%;
+        --Txt_Box_Width: 75%;
+        /* Quick Searches */
+
+        /* play store */
+        --Txt_Play_Font_size: 1em;
+        --Txt_Play_Padding_Top_Bottom: 10px;
+        --Txt_Play_Child5_margin-top: 1vh;
+        /* Rectangle Message */
+        --Message_Background_p-Fontsize: 0.8em;
+        --Message_Background_Best_Section_p1-FontSize:0.8em;
+        --Message_Background_Best_Section_p1-Padding:20px;
+        
     }
-    
+
+    .Txt_Box>.p3 {
+        text-align: center;
+    }
+
 }
 
 @media only screen and (max-width:670px) {
-    
+
     :root {
-        
+
         /* header */
-        --white: #ffffff;
-        --ImgHead: 55px;
-        --Fontsize: 15px;
+
         --head-1_height: 60px;
         --black-Head_width: 30%;
         --Logo_Width: 40%;
@@ -320,7 +913,87 @@ main {
         --Menu_Width: 100%;
         --Menu_Height: 40px;
         /* menu bar */
-        --Item2_p1:3vi;
+        --Item2_p1: 3vi;
+        --Menu_Bar_item2_Search_Location_Height: 4vh;
+        --Search_Location_Search_p-Fontsize: 2.3vi;
+        --Search_Location_Location_p-Fontsize: 2.4vi;
+        /* Quick Searches */
+        --Quick_Section_p-FontSize: 3.5vh;
+        --List_Quick_List_Item-Height: 8em;
+        --List_Quick_List_Item-Withd: 5.5em;
+
+        --Collection_txt_Width: 100%;
+
+        --Image_Box_img-Width: 100%;
+        --Image_Box_img-Height: 100%;
+        --Txt_Box_Width: 95%;
+        --Txt_Box_p3-Width: 30%;
+        /* play Store */
+
+        /* Admin Section */
+        --Admin_Rectangle: 2.5em;
+        /* Message Rectangle */
+        --Message_Background_P_Send-FontSize: 0.5em;
+        --Message_Background_Best_Section_p1-Padding:10px;
+        --Message_Background_Best_Section_p1-Letter_Spacing:0.5px;
+        --Message_Background_Best_Section_p1-FontSize:0.6em;
+
+        
+
+
+    }
+
+    .Rectangle_Play>.Group_P {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .Play_Apple {
+        width: 100%;
+    }
+
+    .Litem {
+        width: 100%;
+        height: auto;
+        display: flex;
+
+
+    }
+
+    .Collection_list>.Litem>.Image_Box {
+        width: 100%;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+
+    }
+
+    .Txt_Box {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 95%;
+    }
+
+    /* .Txt_Box>.p1 {}
+
+    .Txt_Box>.p2 {}
+
+    .Txt_Box>.p3 {} */
+
+    .Collection_txt {
+        margin: 0;
+        text-align: center;
     }
 
     .bar {
@@ -338,25 +1011,26 @@ main {
     }
 
 
-    .menu_Background>.menu:hover .bar{
+    .menu_Background>.menu:hover .bar {
         display: none;
     }
 
-    .menu_Background>.menu:hover ul{
-        
+    .menu_Background>.menu:hover ul {
+
         margin: auto;
 
         display: flex;
-        align-items:start;
+        align-items: start;
         flex-direction: column;
-   
-     
+
+
         overflow: hidden;
         width: 50vi;
         background-color: var(--green2);
         height: auto;
     }
-    .menu_Background > .menu >ul>li{
+
+    .menu_Background>.menu>ul>li {
         margin: 0;
         width: 80%;
         padding: 2.5vi;
@@ -367,8 +1041,8 @@ main {
         transition-duration: 2s;
     }
 
-    .menu_Background > .menu >ul>li:hover{
-        transition:all;
+    .menu_Background>.menu>ul>li:hover {
+        transition: all;
         transition-duration: 1s;
         background-color: rgb(255, 255, 255);
         color: black;
@@ -398,7 +1072,24 @@ main {
         /* menu */
         --Menu_Width: 65%;
         --Menu_Height: 35px;
-        --Menu_Ol_li_P_fontsize:3.5vi;
+        --Menu_Ol_li_P_fontsize: 3.5vi;
+        --List_Quick_List_Item-Height: 9em;
+        --List_Quick_List_Item-Withd: 7em;
+        --Menu_Bar_item2_Search_Location_Height: 3.8vh;
+
+        --Txt_Box_p3-fontSize: 0.6em;
+        --Txt_Box_p3-Width: 35%;
+
+        /* Recatange Message */
+        --Arrow_Rectangle_i-Fontsize: 6.5vi;
+
+
+        --Message_Background_P_Send-FontsizeEqual:25px;
+        --Message_Background_Best_Section_p1-FontSize:0.5em;
+
+        --Message_Background_Best_Section_p1-Padding:10px;
+
+
     }
 
     .menu ul {
@@ -425,7 +1116,26 @@ main {
         /* menu */
         --Menu_Width: 65%;
         --Menu_Height: 35px;
-        --Menu_Ol_li_P_fontsize:3vi;
+        --Menu_Ol_li_P_fontsize: 3vi;
+        --Search_Location_Search_p-Fontsize: 4vi;
+        --Search_Location_Location_p-Fontsize: 3.5vi;
+        --location_with: 50%;
+
+        /* Rectangle Message */
+        --Message_Background_P_Send-FontsizeEqual:23px;
+        --Message_Background_p-Fontsize: 1em;
+
+        
+
+        
+
+
+    }
+
+    .Rectangle_Play>.Group_P>.Txt_Play {
+        text-align: center;
+        overflow: hidden;
+        width: 100%;
     }
 
     .menu ul {
@@ -451,7 +1161,15 @@ main {
         /* menu */
         --Menu_Width: 65%;
         --Menu_Height: 35px;
-        --Menu_Ol_Withd:20%;
-        --Menu_Ol_li_P_fontsize:2vi;
+        --Menu_Ol_Withd: 20%;
+        --Menu_Ol_li_P_fontsize: 2vi;
+        --List_Quick_List_Item-Height: 7em;
+        --List_Quick_List_Item-Withd: 5.2em;
+
+        /* Admin Section */
+        --Admin_Rectangle: 1.7em;
+        --Message_Background_p-Fontsize: 0.8em;
+        --Message_Background_P_Send-FontsizeEqual:15px;
+
     }
 }
